@@ -1,0 +1,12 @@
+{
+  "theme": "dark",
+  "skipDangerousModePermissionPrompt": true,
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "jq -r 'if .context_window.total_input_tokens != null then \"ctx: \" + (.context_window.total_input_tokens | tostring) + \" / \" + (.context_window.context_window_size | tostring) + \" (\" + (.context_window.used_percentage | tostring) + \"%)\" else \"ctx: –\" end' 2>/dev/null || echo \"ctx: –\"",
+    "refreshInterval": 10
+  }
+}
