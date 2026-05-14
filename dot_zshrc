@@ -1,0 +1,35 @@
+HISTFILE=$HOME/.zhistory
+SAVELIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+# completion using arrow keys
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
+source <(fzf --zsh)
+
+# Alias
+alias ls="eza --icons=always"
+alias ll="ls"
+alias cd="z"
+alias p="cd ~/Projects"
+alias nx="pnpm nx"
+alias cat="bat"
+alias c="claude --allow-dangerously-skip-permissions"
+alias dotf="chezmoi"
+
+source /opt/homebrew/opt/spaceship/spaceship.zsh
+export PATH="$HOME/.local/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion

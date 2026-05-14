@@ -1,0 +1,6 @@
+theme = Catppuccin Mocha
+background-opacity = 0.9
+background-blur-radius = 19
+font-family = "JetBrains Mono"
+window-colorspace = "display-p3"
+keybind = global:cmd+;=toggle_quick_terminal
