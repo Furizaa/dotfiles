@@ -27,7 +27,6 @@ alias cat="bat"
 alias c="claude --allow-dangerously-skip-permissions"
 alias dotf="chezmoi"
 
-source /opt/homebrew/opt/spaceship/spaceship.zsh
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.rustup/toolchains/stable-aarch64-apple-darwin/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
