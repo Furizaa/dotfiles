@@ -1,6 +1,7 @@
 [core]
 	autocrlf = input
 	editor = vim
+  pager = delta
 
 [init]
 	defaultBranch = main
@@ -40,4 +41,11 @@
 
 [push]
 	autoSetupRemote = true
-	followTags = true
+  followTags = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true
+  dark = true
