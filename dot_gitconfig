@@ -49,3 +49,6 @@
 [delta]
   navigate = true
   dark = true
+
+[include]
+  path = ~/.config/delta/themes.gitconfig
